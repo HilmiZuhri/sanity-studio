@@ -1,37 +1,82 @@
-import { defineType, defineField } from 'sanity'
-
-export default defineType({
+export default {
   name: 'project',
-  title: 'Project Portofolio',
   type: 'document',
+  title: 'Portfolio Project',
   fields: [
-    defineField({
+    {
       name: 'title',
-      title: 'Judul Proyek',
       type: 'string',
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
+      title: 'Project Title'
+    },
+    {
+      name: 'category',
+      type: 'string',
+      title: 'Category',
+      description: 'e.g., Brand Storytelling, Ad Copy, Web Copy, Scriptwriting'
+    },
+    {
       name: 'description',
-      title: 'Deskripsi Proyek',
       type: 'text',
-    }),
-    defineField({
+      title: 'Brief Description',
+      description: 'Single sentence preview for the grid view'
+    },
+    {
+      name: 'challenge',
+      type: 'text',
+      title: 'The Challenge',
+      description: 'The complex problem the brand was facing'
+    },
+    {
+      name: 'solution',
+      type: 'text',
+      title: 'The Solution',
+      description: 'Your creative and copywriting approach to solve it'
+    },
+    {
+      name: 'client',
+      type: 'string',
+      title: 'Client Name'
+    },
+    {
+      name: 'year',
+      type: 'string',
+      title: 'Year'
+    },
+    {
       name: 'mainImage',
-      title: 'Foto / Screenshot Proyek',
       type: 'image',
-      options: { hotspot: true },
-    }),
-    defineField({
-      name: 'tags',
-      title: 'Teknologi (Tags)',
-      type: 'array',
-      of: [{ type: 'string' }],
-    }),
-    defineField({
-      name: 'githubUrl',
-      title: 'Link GitHub',
+      title: 'Project Display Image',
+      options: {
+        hotspot: true,
+      }
+    },
+    {
+      name: 'imageUrl',
       type: 'url',
-    }),
-  ],
-})
+      title: 'Alternative Image URL',
+      description: 'Use if hosting image externally instead of uploading'
+    },
+    {
+      name: 'results',
+      type: 'array',
+      title: 'Key Out-turns / Metrics',
+      of: [{ type: 'string' }],
+    },
+    {
+      name: 'deliverables',
+      type: 'array',
+      title: 'Deliverables & Scope',
+      of: [{ type: 'string' }],
+    },
+    {
+      name: 'testimonial',
+      type: 'object',
+      title: 'Client Testimonial (Optional)',
+      fields: [
+        { name: 'quote', type: 'text', title: 'Quote' },
+        { name: 'author', type: 'string', title: 'Author Name' },
+        { name: 'role', type: 'string', title: 'Author Role / Company' }
+      ]
+    }
+  ]
+};
