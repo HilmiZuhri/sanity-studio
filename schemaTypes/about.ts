@@ -8,18 +8,21 @@ export default {
       title: 'Badge Text',
       type: 'string',
       initialValue: 'The Story Behind the Storyteller and Copywriter',
+      description: 'Teks singkat yang muncul di atas judul (misal: The Story Behind the Storyteller and Copywriter)',
     },
     {
       name: 'headingStart',
       title: 'Heading (Plain Text)',
       type: 'string',
       initialValue: 'Six years of shaping',
+      description: 'Bagian pertama judul (misal: Six years of shaping)',
     },
     {
       name: 'headingAccent',
       title: 'Heading (Accent/Muted Text)',
       type: 'string',
       initialValue: 'global narratives.',
+      description: 'Bagian judul yang berwarna/ditekankan (misal: global narratives.)',
     },
     {
       name: 'paragraphs',

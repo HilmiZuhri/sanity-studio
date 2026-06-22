@@ -6,7 +6,8 @@ export default {
     {
       name: 'title',
       type: 'string',
-      title: 'Project Title'
+      title: 'Project Title',
+      description: 'Judul proyek (misal: "Brand Storytelling for XYZ")'
     },
     {
       name: 'category',
@@ -46,6 +47,7 @@ export default {
       name: 'mainImage',
       type: 'image',
       title: 'Project Display Image',
+      description: 'The main image that represents the project in the portfolio grid',
       options: {
         hotspot: true,
       }

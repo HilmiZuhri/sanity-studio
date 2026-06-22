@@ -25,6 +25,7 @@ export default {
       name: 'description',
       title: 'Description',
       type: 'text',
+      description: 'Deskripsi singkat untuk hero section',
       rows: 3,
     },
     {
@@ -32,6 +33,7 @@ export default {
       title: 'Primary CTA Text',
       type: 'string',
       initialValue: 'View Portfolio',
+      description: 'Teks untuk tombol Call-to-Action utama (misal: View Portfolio)',
     },
     {
       name: 'primaryCtaLink',
@@ -44,6 +46,7 @@ export default {
       title: 'Secondary CTA Text',
       type: 'string',
       initialValue: "Let's Talk",
+      description: 'Teks untuk tombol Call-to-Action sekunder (misal: Let\'s Talk)',
     },
     {
       name: 'secondaryCtaLink',
@@ -55,6 +58,7 @@ export default {
       name: 'image',
       title: 'Hero Image',
       type: 'image',
+      description: 'Gambar utama untuk hero section',
       options: {
         hotspot: true, // mengaktifkan fitur crop/focus gambar di Sanity
       },
@@ -69,6 +73,7 @@ export default {
       name: 'quote',
       title: 'Image Overlay Quote',
       type: 'text',
+      description: 'Kutipan yang muncul di atas gambar (misal: "Design is not just what it looks like and feels like. Design is how it works.")',
       rows: 2,
     },
   ],
